@@ -53,6 +53,23 @@
     if (self) {
         
     }
+    UIViewController * viewController1 = [[UIViewController alloc] init];
+    viewController1.view.backgroundColor = [UIColor whiteColor];
+    viewController1.tabBarItem.title = @"新闻";
+    
+    UIViewController * viewController2 = [[UIViewController alloc] init];
+    viewController2.view.backgroundColor = [UIColor whiteColor];
+    viewController2.tabBarItem.title = @"视频";
+    
+    UIViewController * viewController3 = [[UIViewController alloc] init];
+    viewController3.view.backgroundColor = [UIColor whiteColor];
+    viewController3.tabBarItem.title = @"推荐";
+    
+    UIViewController * viewController4 = [[UIViewController alloc] init];
+    viewController4.view.backgroundColor = [UIColor whiteColor];
+    viewController4.tabBarItem.title = @"我的";
+    
+    [self setViewControllers:@[viewController1,viewController2,viewController3,viewController4]];
     return self;
 }
 
@@ -80,9 +97,9 @@
     NSLog(@"ViewController#viewDidLoad");
     // Do any additional setup after loading the view.
     UIView *view = [[TestView alloc] init];
-    
-    
     [self.view addSubview:view];
+        
+    
     
 }
 
