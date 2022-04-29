@@ -17,26 +17,26 @@
     self = [super init];
     self.backgroundColor = [UIColor redColor];
     self.frame = CGRectMake(100, 100, 100, 100);
-    NSLog(@"init");
+    NSLog(@"TestView#init");
     return self;
 }
 
 - (void)willMoveToSuperview:(nullable UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
-    NSLog(@"willMoveToSuperview");
+    NSLog(@"TestView#willMoveToSuperview");
 }
 - (void)didMoveToSuperview{
     [super didMoveToSuperview];
-    NSLog(@"didMoveToSuperview");
+    NSLog(@"TestView#didMoveToSuperview");
 }
 
 - (void)willMoveToWindow:(nullable UIWindow *)newWindow{
     [super willMoveToWindow: newWindow];
-    NSLog(@"willMoveToWindow");
+    NSLog(@"TestView#willMoveToWindow");
 }
 - (void)didMoveToWindow{
     [super didMoveToWindow];
-    NSLog(@"didMoveToWindow");
+    NSLog(@"TestView#didMoveToWindow");
 }
 
 @end
@@ -47,11 +47,37 @@
 
 @implementation ViewController
 
+- (instancetype) init {
+    NSLog(@"ViewController#init");
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"ViewController#viewWillAppear");
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"ViewController#viewDidAppear");
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    NSLog(@"ViewController#viewWillDisappear");
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear: animated];
+    NSLog(@"ViewController#viewDidDisappear");
+}
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ViewController#viewDidLoad");
     // Do any additional setup after loading the view.
     UIView *view = [[TestView alloc] init];
     
