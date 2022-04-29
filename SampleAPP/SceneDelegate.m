@@ -25,9 +25,13 @@
             self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
         UITabBarController *vc =[[UITabBarController alloc]init];
         
-        UIViewController * viewController1 = [[UIViewController alloc] init];
+        ViewController * viewController = [[ViewController alloc] init];
+        
+        
+        UINavigationController * viewController1 = [[UINavigationController alloc] initWithRootViewController:viewController];
         viewController1.view.backgroundColor = [UIColor whiteColor];
         viewController1.tabBarItem.title = @"新闻";
+        viewController1.tabBarItem.image = [UIImage imageNamed:@"Assets/news.png"];
         
         UIViewController * viewController2 = [[UIViewController alloc] init];
         viewController2.view.backgroundColor = [UIColor grayColor];

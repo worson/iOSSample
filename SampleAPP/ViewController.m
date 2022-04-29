@@ -79,11 +79,25 @@
     [super viewDidLoad];
     NSLog(@"ViewController#viewDidLoad");
     // Do any additional setup after loading the view.
-    UIView *view = [[TestView alloc] init];
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor greenColor];
+    view.frame = CGRectMake(100, 100, 100, 100);
     [self.view addSubview:view];
-        
     
+    UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
+    [view addGestureRecognizer: tapGesture];
     
+}
+
+- (void) pushController{
+    
+    UIViewController * vc = [[UIViewController alloc]init];
+    vc.title = @"标题";
+    
+    // todo 未生效
+    vc.navigationItem.rightBarButtonItem.title= [[UIBarButtonItem alloc]initWithTitle:@"分享" menu:nil];
+    
+    [self.navigationController pushViewController: vc animated:NO];
 }
 
 
