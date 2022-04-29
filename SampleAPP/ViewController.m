@@ -7,18 +7,54 @@
 
 #import "ViewController.h"
 
+@interface TestView:UIView
+
+@end
+
+@implementation TestView
+
+- (instancetype)init {
+    self = [super init];
+    self.backgroundColor = [UIColor redColor];
+    self.frame = CGRectMake(100, 100, 100, 100);
+    NSLog(@"init");
+    return self;
+}
+
+- (void)willMoveToSuperview:(nullable UIView *)newSuperview{
+    [super willMoveToSuperview:newSuperview];
+    NSLog(@"willMoveToSuperview");
+}
+- (void)didMoveToSuperview{
+    [super didMoveToSuperview];
+    NSLog(@"didMoveToSuperview");
+}
+
+- (void)willMoveToWindow:(nullable UIWindow *)newWindow{
+    [super willMoveToWindow: newWindow];
+    NSLog(@"willMoveToWindow");
+}
+- (void)didMoveToWindow{
+    [super didMoveToWindow];
+    NSLog(@"didMoveToWindow");
+}
+
+@end
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor redColor];
-    view.frame = CGRectMake(100, 100, 100, 100);
+    UIView *view = [[TestView alloc] init];
+    
     
     [self.view addSubview:view];
     
