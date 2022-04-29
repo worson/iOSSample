@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface TestView:UIView
 
@@ -91,7 +92,7 @@
 
 - (void) pushController{
     
-    UIViewController * vc = [[UIViewController alloc]init];
+    UIViewController * vc = [[TableViewController alloc]init];
     vc.title = @"标题";
     
     // todo 未生效

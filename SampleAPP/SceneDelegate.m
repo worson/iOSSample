@@ -7,6 +7,7 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "TableViewController.h"
 
 
 
@@ -27,7 +28,7 @@
             self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
         UITabBarController *vc =[[UITabBarController alloc]init];
         
-        ViewController * viewController1 = [[ViewController alloc] init];
+        UIViewController * viewController1 = [[TableViewController alloc] init];
         viewController1.view.backgroundColor = [UIColor whiteColor];
         viewController1.tabBarItem.title = @"新闻";
         
