@@ -7,17 +7,15 @@
 
 #import "TableViewController.h"
 
-@interface TableViewController ()
 
-@end
-
-@implementation TableViewController
+@implementation TableViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     
     tableView.dataSource = self;
+    tableView.delegate = self;
     
     [self.view addSubview:tableView];
     
@@ -39,4 +37,16 @@
     return cell;
 }
 
+//UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController * vc = [[UIViewController alloc]init];
+    vc.title = [NSString stringWithFormat:@"item %@", @(indexPath.row)];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

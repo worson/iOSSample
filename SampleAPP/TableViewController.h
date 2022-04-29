@@ -9,6 +9,6 @@
 
 
 @interface TableViewController: UIViewController
-    <UITableViewDataSource>
+    <UITableViewDataSource, UITableViewDelegate>
 
 @end
