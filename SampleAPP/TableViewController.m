@@ -7,8 +7,11 @@
 
 #import "TableViewController.h"
 
+@interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
 
-@implementation TableViewController 
+@end
+
+@implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

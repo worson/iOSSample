@@ -8,7 +8,8 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "TableViewController.h"
-
+#import "CollectionViewController.h"
+#import "VideoViewController.h"
 
 
 @interface SceneDelegate ()
@@ -38,8 +39,8 @@
 //        viewController1.tabBarItem.title = @"新闻";
 //        viewController1.tabBarItem.image = [UIImage imageNamed:@"Assets/news.png"];
         
-        UIViewController * viewController2 = [[UIViewController alloc] init];
-        viewController2.view.backgroundColor = [UIColor grayColor];
+        UIViewController * viewController2 = [[VideoViewController alloc] init];
+//        viewController2.view.backgroundColor = [UIColor grayColor];
         viewController2.tabBarItem.title = @"视频";
         
         UIViewController * viewController3 = [[UIViewController alloc] init];
