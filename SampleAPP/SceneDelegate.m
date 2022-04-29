@@ -25,13 +25,15 @@
             self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
         UITabBarController *vc =[[UITabBarController alloc]init];
         
-        ViewController * viewController = [[ViewController alloc] init];
-        
-        
-        UINavigationController * viewController1 = [[UINavigationController alloc] initWithRootViewController:viewController];
+        ViewController * viewController1 = [[ViewController alloc] init];
         viewController1.view.backgroundColor = [UIColor whiteColor];
         viewController1.tabBarItem.title = @"新闻";
-        viewController1.tabBarItem.image = [UIImage imageNamed:@"Assets/news.png"];
+        
+//        ViewController * viewController = [[ViewController alloc] init];
+//        UINavigationController * viewController1 = [[UINavigationController alloc] initWithRootViewController:viewController];
+//        viewController1.view.backgroundColor = [UIColor whiteColor];
+//        viewController1.tabBarItem.title = @"新闻";
+//        viewController1.tabBarItem.image = [UIImage imageNamed:@"Assets/news.png"];
         
         UIViewController * viewController2 = [[UIViewController alloc] init];
         viewController2.view.backgroundColor = [UIColor grayColor];
@@ -47,9 +49,8 @@
         
         [vc setViewControllers:@[viewController1,viewController2,viewController3,viewController4]];
         
-//        vc.view.backgroundColor = [UIColor whiteColor];//如果不设置背景颜色，屏幕一会就会自动变黑，有知道原因的请赐教
         
-        self.window.rootViewController = vc;
+        self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
         [self.window makeKeyAndVisible];
     }
 }

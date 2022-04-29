@@ -96,7 +96,7 @@
     
     // todo 未生效
     vc.navigationItem.rightBarButtonItem.title= [[UIBarButtonItem alloc]initWithTitle:@"分享" menu:nil];
-    
+    vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController: vc animated:NO];
 }
 
