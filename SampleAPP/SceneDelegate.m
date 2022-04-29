@@ -8,6 +8,8 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 
+
+
 @interface SceneDelegate ()
 
 @end
@@ -47,12 +49,23 @@
         viewController4.view.backgroundColor = [UIColor redColor];
         viewController4.tabBarItem.title = @"我的";
         
+        vc.delegate = self;
+        
         [vc setViewControllers:@[viewController1,viewController2,viewController3,viewController4]];
         
         
         self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
         [self.window makeKeyAndVisible];
     }
+}
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    NSLog(@"UITabBarControllerDelegate#shouldSelectViewController ");
+    return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"UITabBarControllerDelegate#didSelectViewController ");
 }
 
 
