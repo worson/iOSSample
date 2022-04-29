@@ -6,6 +6,7 @@
 //
 
 #import "SceneDelegate.h"
+#import "ViewController.h"
 
 @interface SceneDelegate ()
 
@@ -19,6 +20,34 @@
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     NSLog(@"SceneDelegate#scene:(UIScene *)scene");
+    if (scene) {
+        UIWindowScene *windowScene = (UIWindowScene *)scene;
+            self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
+        UITabBarController *vc =[[UITabBarController alloc]init];
+        
+        UIViewController * viewController1 = [[UIViewController alloc] init];
+        viewController1.view.backgroundColor = [UIColor whiteColor];
+        viewController1.tabBarItem.title = @"新闻";
+        
+        UIViewController * viewController2 = [[UIViewController alloc] init];
+        viewController2.view.backgroundColor = [UIColor grayColor];
+        viewController2.tabBarItem.title = @"视频";
+        
+        UIViewController * viewController3 = [[UIViewController alloc] init];
+        viewController3.view.backgroundColor = [UIColor greenColor];
+        viewController3.tabBarItem.title = @"推荐";
+        
+        UIViewController * viewController4 = [[UIViewController alloc] init];
+        viewController4.view.backgroundColor = [UIColor redColor];
+        viewController4.tabBarItem.title = @"我的";
+        
+        [vc setViewControllers:@[viewController1,viewController2,viewController3,viewController4]];
+        
+//        vc.view.backgroundColor = [UIColor whiteColor];//如果不设置背景颜色，屏幕一会就会自动变黑，有知道原因的请赐教
+        
+        self.window.rootViewController = vc;
+        [self.window makeKeyAndVisible];
+    }
 }
 
 

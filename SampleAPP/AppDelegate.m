@@ -13,12 +13,44 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    NSLog(@")application:(UIApplication *)application didFinishLaunchingWithOptions:");
-    return YES;
+    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UITabBarController *vc =[[UITabBarController alloc]init];
+    
+    UIViewController * viewController1 = [[UIViewController alloc] init];
+    viewController1.view.backgroundColor = [UIColor whiteColor];
+    viewController1.tabBarItem.title = @"新闻";
+    
+    UIViewController * viewController2 = [[UIViewController alloc] init];
+    viewController2.view.backgroundColor = [UIColor whiteColor];
+    viewController2.tabBarItem.title = @"视频";
+    
+    UIViewController * viewController3 = [[UIViewController alloc] init];
+    viewController3.view.backgroundColor = [UIColor whiteColor];
+    viewController3.tabBarItem.title = @"推荐";
+    
+    UIViewController * viewController4 = [[UIViewController alloc] init];
+    viewController4.view.backgroundColor = [UIColor whiteColor];
+    viewController4.tabBarItem.title = @"我的";
+    
+    [vc setViewControllers:@[viewController1,viewController2,viewController3,viewController4]];
+    
+    
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    return YES;
 }
+
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    // Override point for customization after application launch.
+//    NSLog(@")application:(UIApplication *)application didFinishLaunchingWithOptions:");
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    return YES;
+//}
 
 
 #pragma mark - UISceneSession lifecycle
