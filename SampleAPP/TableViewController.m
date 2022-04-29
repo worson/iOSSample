@@ -29,8 +29,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
-    cell.textLabel.text = @"主标题";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"主标题 - %@", @(indexPath.row)];
     cell.detailTextLabel.text = @"副标题";
 //    todo add image
     return cell;
