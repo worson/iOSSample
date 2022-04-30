@@ -30,8 +30,8 @@
         UITabBarController *vc =[[UITabBarController alloc]init];
         
         UIViewController * viewController1 = [[TableViewController alloc] init];
-        viewController1.view.backgroundColor = [UIColor whiteColor];
-        viewController1.tabBarItem.title = @"新闻";
+        
+        
         
 //        ViewController * viewController = [[ViewController alloc] init];
 //        UINavigationController * viewController1 = [[UINavigationController alloc] initWithRootViewController:viewController];

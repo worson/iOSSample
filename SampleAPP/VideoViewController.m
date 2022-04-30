@@ -13,6 +13,17 @@
 
 @implementation VideoViewController
 
+- (instancetype)init{
+    self= [super init];
+    if (self) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.tabBarItem.title = @"视频";
+        self.tabBarItem.image =[UIImage imageNamed:@"icon.bundle/video@2x"];
+        self.tabBarItem.selectedImage =[UIImage imageNamed:@"icon.bundle/video@2x"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

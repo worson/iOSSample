@@ -13,6 +13,17 @@
 
 @implementation TableViewController
 
+- (instancetype)init{
+    self= [super init];
+    if (self) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image =[UIImage imageNamed:@"icon.bundle/page@2x"];
+        self.tabBarItem.selectedImage =[UIImage imageNamed:@"icon.bundle/page_selected@2x"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
@@ -25,6 +36,7 @@
     
 }
 
+//UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
