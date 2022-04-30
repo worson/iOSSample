@@ -80,8 +80,7 @@
 				45AC146C281A7C670055B91F /* Assets.xcassets */,
 				45AC1471281A7C670055B91F /* Info.plist */,
 				45AC1472281A7C670055B91F /* main.m */,
-				45AC14A2281BD2030055B91F /* TableViewController.h */,
-				45AC14A3281BD3030055B91F /* TableViewController.m */,
+				45AC14B5281CDB4D0055B91F /* UIBasicDemo */,
 				45AC14A5281BF7C50055B91F /* CollectionViewController.m */,
 				45AC14A7281BF7CF0055B91F /* CollectionViewController.h */,
 				45AC14A8281BF94C0055B91F /* VideoViewController.h */,
@@ -89,6 +88,23 @@
 				45AC14AB281CAC950055B91F /* Settings.bundle */,
 			);
 			path = SampleAPP;
+			sourceTree = "<group>";
+		};
+		45AC14B5281CDB4D0055B91F /* UIBasicDemo */ = {
+			isa = PBXGroup;
+			children = (
+				45AC14B6281CDBB60055B91F /* TableView */,
+			);
+			path = UIBasicDemo;
+			sourceTree = "<group>";
+		};
+		45AC14B6281CDBB60055B91F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				45AC14A2281BD2030055B91F /* TableViewController.h */,
+				45AC14A3281BD3030055B91F /* TableViewController.m */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
