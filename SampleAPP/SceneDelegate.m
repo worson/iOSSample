@@ -10,6 +10,7 @@
 #import "TableViewController.h"
 #import "CollectionViewController.h"
 #import "VideoViewController.h"
+#import "GTSplashView.h"
 
 
 @interface SceneDelegate ()
@@ -58,6 +59,14 @@
         
         self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
         [self.window makeKeyAndVisible];
+        // 启动屏开关
+        if (false) {
+            [self.window addSubview:({
+                    GTSplashView *splashView = [[GTSplashView alloc] initWithFrame:self.window.bounds];
+                    splashView;
+                })];
+        }
+        
     }
 }
 
