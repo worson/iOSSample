@@ -17,6 +17,7 @@
 		45AC14AA281BF94C0055B91F /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14A9281BF94C0055B91F /* VideoViewController.m */; };
 		45AC14AC281CAC950055B91F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45AC14AB281CAC950055B91F /* Settings.bundle */; };
 		45AC14B2281CAE9A0055B91F /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45AC14B1281CAE9A0055B91F /* icon.bundle */; };
+		45AC14BB281CDD420055B91F /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14BA281CDD420055B91F /* GTScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		45AC14A9281BF94C0055B91F /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		45AC14AB281CAC950055B91F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		45AC14B1281CAE9A0055B91F /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		45AC14B9281CDD420055B91F /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		45AC14BA281CDD420055B91F /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 		45AC145F281A7C650055B91F /* SampleAPP */ = {
 			isa = PBXGroup;
 			children = (
+				45AC14B8281CDD1D0055B91F /* GTScreen */,
 				45AC14B1281CAE9A0055B91F /* icon.bundle */,
 				45AC1460281A7C650055B91F /* AppDelegate.h */,
 				45AC1461281A7C650055B91F /* AppDelegate.m */,
@@ -113,6 +117,15 @@
 				45AC14A7281BF7CF0055B91F /* CollectionViewController.h */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		45AC14B8281CDD1D0055B91F /* GTScreen */ = {
+			isa = PBXGroup;
+			children = (
+				45AC14B9281CDD420055B91F /* GTScreen.h */,
+				45AC14BA281CDD420055B91F /* GTScreen.m */,
+			);
+			path = GTScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45AC14BB281CDD420055B91F /* GTScreen.m in Sources */,
 				45AC1468281A7C650055B91F /* ViewController.m in Sources */,
 				45AC1462281A7C650055B91F /* AppDelegate.m in Sources */,
 				45AC14A6281BF7C50055B91F /* CollectionViewController.m in Sources */,
