@@ -11,7 +11,7 @@
 
 @interface SampleWebViewController () <WKNavigationDelegate>
 
-@property(nonatomic,strong,readwrite) WKWebView* webview;
+@property(nonatomic,strong,readwrite) WKWebView* webView;
 @property(nonatomic,strong,readwrite) UIProgressView* progressView;
 
 @end
@@ -19,7 +19,7 @@
 @implementation SampleWebViewController
 
 - (void)dealloc{
-    [self.webview removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 
 - (void)viewDidLoad {
@@ -34,13 +34,13 @@
     })];
     
     [self.view addSubview:({
-        self.webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88)];
-        self.webview.navigationDelegate=self;
-        [self.webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-        self.webview;
+        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88)];
+        self.webView.navigationDelegate=self;
+        [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+        self.webView;
     })];
     
-    [self.webview loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"https://www.baidu.com/"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"https://www.baidu.com/"]]];
     
 }
 # pragma mark - WKNavigationDelegate
@@ -54,8 +54,8 @@
 }
 # pragma mark - Obsereve
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
-    NSLog(@"%@", [NSString stringWithFormat:@"observeValueForKeyPath: %@", @(self.webview.estimatedProgress)]);
-    self.progressView.progress = self.webview.estimatedProgress;
+    NSLog(@"%@", [NSString stringWithFormat:@"observeValueForKeyPath: %@", @(self.webView.estimatedProgress)]);
+    self.progressView.progress = self.webView.estimatedProgress;
 }
 
 @end
