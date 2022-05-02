@@ -54,7 +54,7 @@
 }
 # pragma mark - Obsereve
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
-    NSLog(@"%@", [NSString stringWithFormat:@"observeValueForKeyPath: %@", @(self.webView.estimatedProgress)]);
+    NSLog(@"%@", [NSString stringWithFormat:@"observeValueForKeyPath: %f", self.webView.estimatedProgress]);
     self.progressView.progress = self.webView.estimatedProgress;
 }
 
