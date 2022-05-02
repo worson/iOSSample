@@ -11,6 +11,7 @@
 #import "CollectionViewController.h"
 #import "VideoViewController.h"
 #import "GTSplashView.h"
+#import "MeViewController.h"
 
 
 @interface SceneDelegate ()
@@ -48,8 +49,8 @@
         viewController3.view.backgroundColor = [UIColor greenColor];
         viewController3.tabBarItem.title = @"推荐";
         
-        UIViewController * viewController4 = [[UIViewController alloc] init];
-        viewController4.view.backgroundColor = [UIColor redColor];
+        UIViewController * viewController4 = [[MeViewController alloc] init];
+//        viewController4.view.backgroundColor = [UIColor redColor];
         viewController4.tabBarItem.title = @"我的";
         
         vc.delegate = self;

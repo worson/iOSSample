@@ -19,6 +19,7 @@
 		45AC14B2281CAE9A0055B91F /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45AC14B1281CAE9A0055B91F /* icon.bundle */; };
 		45AC14BB281CDD420055B91F /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14BA281CDD420055B91F /* GTScreen.m */; };
 		45AC14BE281CDE7E0055B91F /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14BD281CDE7E0055B91F /* GTSplashView.m */; };
+		45AC14C1281F84400055B91F /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14C0281F84400055B91F /* MeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		45AC14BA281CDD420055B91F /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		45AC14BC281CDE7E0055B91F /* GTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSplashView.h; sourceTree = "<group>"; };
 		45AC14BD281CDE7E0055B91F /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
+		45AC14BF281F84400055B91F /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		45AC14C0281F84400055B91F /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				45AC14B7281CDC070055B91F /* CollectionView */,
 				45AC14B6281CDBB60055B91F /* TableView */,
+				45AC14BF281F84400055B91F /* MeViewController.h */,
+				45AC14C0281F84400055B91F /* MeViewController.m */,
 			);
 			path = UIBasicDemo;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				45AC1468281A7C650055B91F /* ViewController.m in Sources */,
 				45AC1462281A7C650055B91F /* AppDelegate.m in Sources */,
 				45AC14A6281BF7C50055B91F /* CollectionViewController.m in Sources */,
+				45AC14C1281F84400055B91F /* MeViewController.m in Sources */,
 				45AC1473281A7C670055B91F /* main.m in Sources */,
 				45AC14AA281BF94C0055B91F /* VideoViewController.m in Sources */,
 				45AC14A4281BD3030055B91F /* TableViewController.m in Sources */,
