@@ -7,10 +7,12 @@
 
 #import "SampleWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "GTScreen.h"
 
 @interface SampleWebViewController () <WKNavigationDelegate>
 
 @property(nonatomic,strong,readwrite) WKWebView* webview;
+@property(nonatomic,strong,readwrite) UIProgressView* progressView;
 
 @end
 
@@ -22,11 +24,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.webview = [[WKWebView alloc] initWithFrame:self.view.frame];
-    self.webview.navigationDelegate=self;
-    [self.webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+//    CGFloat progressHeight = 88;
+//    CGFloat toolBarHeight=0;
     
-    [self.view addSubview:self.webview];
+    
+    [self.view addSubview:({
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 88)];
+        self.progressView;
+    })];
+    
+    [self.view addSubview:({
+        self.webview = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88)];
+        self.webview.navigationDelegate=self;
+        [self.webview addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+        self.webview;
+    })];
     
     [self.webview loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"https://www.baidu.com/"]]];
     
@@ -42,7 +54,8 @@
 }
 # pragma mark - Obsereve
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
-    NSLog([NSString stringWithFormat:@"observeValueForKeyPath: %@", @(self.webview.estimatedProgress)]);
+    NSLog(@"%@", [NSString stringWithFormat:@"observeValueForKeyPath: %@", @(self.webview.estimatedProgress)]);
+    self.progressView.progress = self.webview.estimatedProgress;
 }
 
 @end
