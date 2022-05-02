@@ -20,6 +20,7 @@
 		45AC14BB281CDD420055B91F /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14BA281CDD420055B91F /* GTScreen.m */; };
 		45AC14BE281CDE7E0055B91F /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14BD281CDE7E0055B91F /* GTSplashView.m */; };
 		45AC14C1281F84400055B91F /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14C0281F84400055B91F /* MeViewController.m */; };
+		45AC14C4281F8C440055B91F /* SampleWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC14C3281F8C440055B91F /* SampleWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		45AC14BD281CDE7E0055B91F /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
 		45AC14BF281F84400055B91F /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		45AC14C0281F84400055B91F /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		45AC14C2281F8C440055B91F /* SampleWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleWebViewController.h; sourceTree = "<group>"; };
+		45AC14C3281F8C440055B91F /* SampleWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				45AC14B6281CDBB60055B91F /* TableView */,
 				45AC14BF281F84400055B91F /* MeViewController.h */,
 				45AC14C0281F84400055B91F /* MeViewController.m */,
+				45AC14C2281F8C440055B91F /* SampleWebViewController.h */,
+				45AC14C3281F8C440055B91F /* SampleWebViewController.m */,
 			);
 			path = UIBasicDemo;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				45AC1468281A7C650055B91F /* ViewController.m in Sources */,
 				45AC1462281A7C650055B91F /* AppDelegate.m in Sources */,
 				45AC14A6281BF7C50055B91F /* CollectionViewController.m in Sources */,
+				45AC14C4281F8C440055B91F /* SampleWebViewController.m in Sources */,
 				45AC14C1281F84400055B91F /* MeViewController.m in Sources */,
 				45AC1473281A7C670055B91F /* main.m in Sources */,
 				45AC14AA281BF94C0055B91F /* VideoViewController.m in Sources */,

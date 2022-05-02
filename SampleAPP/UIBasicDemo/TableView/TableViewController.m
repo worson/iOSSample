@@ -6,6 +6,7 @@
 //
 
 #import "TableViewController.h"
+#import "SampleWebViewController.h"
 
 @interface TableViewController() <UITableViewDataSource, UITableViewDelegate>
 
@@ -58,7 +59,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIViewController * vc = [[UIViewController alloc]init];
+    UIViewController * vc = [[SampleWebViewController alloc]init];
     vc.title = [NSString stringWithFormat:@"item %@", @(indexPath.row)];
     vc.view.backgroundColor = [UIColor whiteColor];
     
