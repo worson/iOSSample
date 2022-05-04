@@ -1,0 +1,3 @@
+target 'SampleAPP' do 
+  pod 'AFNetworking'
+end
