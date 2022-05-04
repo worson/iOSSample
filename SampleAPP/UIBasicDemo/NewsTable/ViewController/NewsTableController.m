@@ -8,10 +8,11 @@
 #import "NewsTableController.h"
 #import "SampleWebViewController.h"
 #import "SessionNewDataLoader.h"
+#import "NewsDataLoader.h"
 
 @interface NewsTableController() <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong, readwrite) SessionNewDataLoader *dataLoader;
+@property (nonatomic, strong, readwrite) NewsDataLoader *dataLoader;
 
 @end
 
@@ -38,7 +39,7 @@
     
     [self.view addSubview:tableView];
     
-    self.dataLoader = [[SessionNewDataLoader alloc] init];
+    self.dataLoader = [[NewsDataLoader alloc] init];
     [self.dataLoader loadData];
     
     

@@ -1,2 +1,8 @@
 
 SampleAPP.xcodeproj/xcuserdata/wangshengxing.xcuserdatad/xcdebugger
+Pods/AFNetworking
+Pods/Headers
+Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch
+Pods/Target Support Files
+Pods
+SampleAPP.xcworkspace
