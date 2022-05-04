@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450E328128226BD5004FD96D /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E328028226BD5004FD96D /* NewsTableController.m */; };
+		450E328728226CD4004FD96D /* SessionNewDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E328628226CD4004FD96D /* SessionNewDataLoader.m */; };
 		45AC1462281A7C650055B91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1461281A7C650055B91F /* AppDelegate.m */; };
 		45AC1465281A7C650055B91F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1464281A7C650055B91F /* SceneDelegate.m */; };
 		45AC1468281A7C650055B91F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1467281A7C650055B91F /* ViewController.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450E327F28226BD5004FD96D /* NewsTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
+		450E328028226BD5004FD96D /* NewsTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
+		450E328528226CD4004FD96D /* SessionNewDataLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionNewDataLoader.h; sourceTree = "<group>"; };
+		450E328628226CD4004FD96D /* SessionNewDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SessionNewDataLoader.m; sourceTree = "<group>"; };
 		45AC145D281A7C650055B91F /* SampleAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AC1460281A7C650055B91F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45AC1461281A7C650055B91F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +69,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450E328228226BDE004FD96D /* NewsTable */ = {
+			isa = PBXGroup;
+			children = (
+				450E328428226C9A004FD96D /* Model */,
+				450E328328226BF2004FD96D /* ViewController */,
+			);
+			path = NewsTable;
+			sourceTree = "<group>";
+		};
+		450E328328226BF2004FD96D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				450E327F28226BD5004FD96D /* NewsTableController.h */,
+				450E328028226BD5004FD96D /* NewsTableController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		450E328428226C9A004FD96D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				450E328528226CD4004FD96D /* SessionNewDataLoader.h */,
+				450E328628226CD4004FD96D /* SessionNewDataLoader.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		45AC1454281A7C650055B91F = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +137,7 @@
 		45AC14B5281CDB4D0055B91F /* UIBasicDemo */ = {
 			isa = PBXGroup;
 			children = (
+				450E328228226BDE004FD96D /* NewsTable */,
 				45AC14B7281CDC070055B91F /* CollectionView */,
 				45AC14B6281CDBB60055B91F /* TableView */,
 				45AC14BF281F84400055B91F /* MeViewController.h */,
@@ -217,11 +251,13 @@
 				45AC1468281A7C650055B91F /* ViewController.m in Sources */,
 				45AC1462281A7C650055B91F /* AppDelegate.m in Sources */,
 				45AC14A6281BF7C50055B91F /* CollectionViewController.m in Sources */,
+				450E328728226CD4004FD96D /* SessionNewDataLoader.m in Sources */,
 				45AC14C4281F8C440055B91F /* SampleWebViewController.m in Sources */,
 				45AC14C1281F84400055B91F /* MeViewController.m in Sources */,
 				45AC1473281A7C670055B91F /* main.m in Sources */,
 				45AC14AA281BF94C0055B91F /* VideoViewController.m in Sources */,
 				45AC14A4281BD3030055B91F /* TableViewController.m in Sources */,
+				450E328128226BD5004FD96D /* NewsTableController.m in Sources */,
 				45AC14BE281CDE7E0055B91F /* GTSplashView.m in Sources */,
 				45AC1465281A7C650055B91F /* SceneDelegate.m in Sources */,
 			);

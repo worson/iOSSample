@@ -12,6 +12,7 @@
 #import "VideoViewController.h"
 #import "GTSplashView.h"
 #import "MeViewController.h"
+#import "NewsTableController.h"
 
 
 @interface SceneDelegate ()
@@ -31,7 +32,7 @@
             self.window = [[UIWindow alloc]initWithWindowScene:windowScene];
         UITabBarController *vc =[[UITabBarController alloc]init];
         
-        UIViewController * viewController1 = [[TableViewController alloc] init];
+        UIViewController * viewController1 = [[NewsTableController alloc] init];
         
         
         
