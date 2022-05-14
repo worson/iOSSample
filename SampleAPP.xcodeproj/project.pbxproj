@@ -12,6 +12,7 @@
 		450E328728226CD4004FD96D /* SessionNewDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E328628226CD4004FD96D /* SessionNewDataLoader.m */; };
 		450E328A2822A642004FD96D /* NewsDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E32892822A642004FD96D /* NewsDataLoader.m */; };
 		450E328E2822B12C004FD96D /* NewsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E328D2822B12C004FD96D /* NewsListItem.m */; };
+		450E3291282F6999004FD96D /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 450E3290282F6999004FD96D /* NewsTableViewCell.m */; };
 		45AC1462281A7C650055B91F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1461281A7C650055B91F /* AppDelegate.m */; };
 		45AC1465281A7C650055B91F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1464281A7C650055B91F /* SceneDelegate.m */; };
 		45AC1468281A7C650055B91F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC1467281A7C650055B91F /* ViewController.m */; };
@@ -38,6 +39,8 @@
 		450E32892822A642004FD96D /* NewsDataLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDataLoader.m; sourceTree = "<group>"; };
 		450E328C2822B12C004FD96D /* NewsListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsListItem.h; sourceTree = "<group>"; };
 		450E328D2822B12C004FD96D /* NewsListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsListItem.m; sourceTree = "<group>"; };
+		450E328F282F6999004FD96D /* NewsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		450E3290282F6999004FD96D /* NewsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
 		45AC145D281A7C650055B91F /* SampleAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AC1460281A7C650055B91F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45AC1461281A7C650055B91F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 		450E328B2822B111004FD96D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				450E328F282F6999004FD96D /* NewsTableViewCell.h */,
+				450E3290282F6999004FD96D /* NewsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				45AC14A4281BD3030055B91F /* TableViewController.m in Sources */,
 				450E328128226BD5004FD96D /* NewsTableController.m in Sources */,
 				45AC14BE281CDE7E0055B91F /* GTSplashView.m in Sources */,
+				450E3291282F6999004FD96D /* NewsTableViewCell.m in Sources */,
 				45AC1465281A7C650055B91F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

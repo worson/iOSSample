@@ -9,9 +9,11 @@
 #import "SampleWebViewController.h"
 #import "SessionNewDataLoader.h"
 #import "NewsDataLoader.h"
+#import "NewsTableViewCell.h"
 
 @interface NewsTableController() <UITableViewDataSource, UITableViewDelegate>
-
+@property (nonatomic, strong, readwrite) UITableView *tableView;
+@property (nonatomic, strong, readwrite) NSArray *dataArray;
 @property (nonatomic, strong, readwrite) SessionNewDataLoader *dataLoader;
 
 @end
@@ -33,15 +35,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    
+    self.tableView = tableView;
     tableView.dataSource = self;
     tableView.delegate = self;
     
     [self.view addSubview:tableView];
     
     self.dataLoader = [[SessionNewDataLoader alloc] init];
-    [self.dataLoader loadData];
-    
+//    [self.dataLoader loadData];
+
+    __weak typeof(self)wself = self;
+    [self.dataLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<NewsListItem *> * _Nonnull dataArray) {
+        __strong typeof(wself) strongSelf = wself;
+        strongSelf.dataArray = dataArray;
+        [strongSelf.tableView reloadData];
+    }];
     
 }
 
@@ -51,12 +59,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    NewsTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"主标题 -- %@", @(indexPath.row)];
-    cell.detailTextLabel.text = @"副标题";
+    [cell layoutTableViewCellWithItem:[self.dataArray objectAtIndex:indexPath.row]];
 //    todo add image
     return cell;
 }

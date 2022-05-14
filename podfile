@@ -1,4 +1,5 @@
 platform :ios, '8.0'
 target 'SampleAPP' do 
   pod 'AFNetworking'
+  pod 'SDWebImage'
 end
