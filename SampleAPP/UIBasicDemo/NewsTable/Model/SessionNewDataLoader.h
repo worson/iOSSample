@@ -9,9 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class NewsListItem;
+typedef void(^GTListLoaderFinishBlock)(BOOL success, NSArray<NewsListItem *> *dataArray);
+
 @interface SessionNewDataLoader : NSObject
 
 - (void) loadData;
+- (void)loadListDataWithFinishBlock:(GTListLoaderFinishBlock)finishBlock;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -12,7 +12,7 @@
 
 @interface NewsTableController() <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong, readwrite) NewsDataLoader *dataLoader;
+@property (nonatomic, strong, readwrite) SessionNewDataLoader *dataLoader;
 
 @end
 
@@ -39,7 +39,7 @@
     
     [self.view addSubview:tableView];
     
-    self.dataLoader = [[NewsDataLoader alloc] init];
+    self.dataLoader = [[SessionNewDataLoader alloc] init];
     [self.dataLoader loadData];
     
     
