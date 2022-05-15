@@ -28,16 +28,18 @@
 //    CGFloat toolBarHeight=0;
     
     
-    [self.view addSubview:({
-        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 88)];
-        self.progressView;
-    })];
     
+    CGFloat heightStartOffset = STATUSBARHEIGHT+44;
     [self.view addSubview:({
-        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 88, self.view.frame.size.width, self.view.frame.size.height-88)];
+        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, heightStartOffset, self.view.frame.size.width, self.view.frame.size.height - heightStartOffset)];
         self.webView.navigationDelegate=self;
         [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
         self.webView;
+    })];
+    
+    [self.view addSubview:({
+        self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, heightStartOffset, self.view.frame.size.width, 20)];
+        self.progressView;
     })];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:@"https://www.baidu.com/"]]];
