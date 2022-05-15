@@ -60,6 +60,31 @@
     [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:nil];
     [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
     NSLog(@"_archiveListDataWithArray, listDataPath=%@",listDataPath);
+    
+    //其他文件的操作演示
+    
+//     [[NSUserDefaults standardUserDefaults] setObject:listData forKey:@"listData"];
+//
+//    NSData *testListdata = [[NSUserDefaults standardUserDefaults] dataForKey:@"listData"];
+//
+//    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class],[GTListItem class], nil]  fromData:testListdata error:nil];
+    
+    //查询文件
+//    BOOL fileExist = [fileManager fileExistsAtPath:listDataPath];
+    
+    //删除
+//    if(fileExist){
+//        [fileManager removeItemAtPath:listDataPath error:nil];
+//    }
+    
+//    NSFileHandle *fileHandler = [NSFileHandle fileHandleForUpdatingAtPath:listDataPath];
+//
+//    [fileHandler seekToEndOfFile];
+//    [fileHandler writeData:[@"def" dataUsingEncoding:NSUTF8StringEncoding]];
+//
+//    [fileHandler synchronizeFile];
+//    [fileHandler closeFile];
+    
 }
 - (NSArray<NewsListItem *> *)_readDataFromLocal{
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
