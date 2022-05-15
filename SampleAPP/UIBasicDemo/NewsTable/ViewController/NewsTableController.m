@@ -55,7 +55,7 @@
 
 //UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return _dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -80,4 +80,5 @@
     
     [self.navigationController pushViewController:vc animated:YES];
 }
+
 @end
