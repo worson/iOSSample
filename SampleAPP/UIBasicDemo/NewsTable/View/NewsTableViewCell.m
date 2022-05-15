@@ -126,6 +126,7 @@
 //        });
 //    });
     
+    
     [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl]
                                   completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                                         //处理业务逻辑，通过cacheType判断图片是否命中缓存
